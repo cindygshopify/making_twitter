@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_04_22_135338) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "likes", "likes", column: "liker_id"
   add_foreign_key "likes", "tweets"
+  add_foreign_key "likes", "users", column: "liker_id"
   add_foreign_key "tweets", "users"
 end
